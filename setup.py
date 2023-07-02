@@ -26,14 +26,14 @@ ROOT_DIR = Path(__file__).resolve().parent
 print(ROOT_DIR)
 REQUIREMENTS_DIR = ROOT_DIR / 'requirements'
 PACKAGE_DIR = ROOT_DIR / 'bikeshare_model'
-with open(PACKAGE_DIR / "VERSION") as f:
+with open(PACKAGE_DIR / "VERSION", encoding="utf-8") as f:
     _version = f.read().strip()
     about["__version__"] = _version
 
 
 # What packages are required for this module to be executed?
 def list_reqs(fname="requirements.txt"):
-    with open(REQUIREMENTS_DIR / fname) as fd:
+    with open(REQUIREMENTS_DIR / fname, encoding="utf-8") as fd:
         return fd.read().splitlines()
 
 # Where the magic happens:
@@ -43,8 +43,8 @@ setup(
     description=DESCRIPTION,
     long_description=long_description,
     long_description_content_type="text/markdown",
-    author="Chakri",
-    author_email="chakri.ptf@gmail.com",
+    author="madhusmita",
+    author_email="smitas.madhu@gmail.com",
     python_requires=REQUIRES_PYTHON,
     packages=find_packages(exclude=("tests",)),
     package_data={"classification_model": ["VERSION"]},

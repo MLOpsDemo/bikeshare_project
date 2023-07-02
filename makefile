@@ -13,7 +13,7 @@ format:
 	black ./bikeshare_model
 	
 lint:
-	pylint --disable=R,C ./bikeshare_model
+	pylint --disable=R,C ./bikeshare_model/*.py
 
 test:
 	python -m pytest tests/test_*.py
