@@ -27,7 +27,7 @@ jobs:
     - name: Install dependencies
       run: |
         make install
-    - name: verify checked in pkl file
+    - name: test with pytest
       run: |
         make test    
     - name: Verify model is built
