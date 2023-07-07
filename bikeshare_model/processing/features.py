@@ -133,7 +133,7 @@ class WeekdayOneHotEncoder(BaseEstimator, TransformerMixin):
             raise ValueError("variable name should be a string")
 
         self.variable = variable
-        self.encoder = OneHotEncoder(sparse_output=False)
+        self.encoder = OneHotEncoder(sparse=False)
 
     def fit(self, X: pd.DataFrame, y: pd.Series = None):
         # we need the fit statement to accomodate the sklearn pipeline
