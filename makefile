@@ -4,7 +4,7 @@ install:
 	pip3 install -r requirements/requirements.txt
 		
 train:
-	python ./bikeshare_model/train_pipeline.py
+	python3 ./bikeshare_model/train_pipeline.py
 
 format-check:
 	-black --check ./bikeshare_model
@@ -16,6 +16,6 @@ lint:
 	pylint --disable=R,C ./bikeshare_model/*.py
 
 test:
-	python -m pytest tests/test_*.py
+	python3 -m pytest tests/test_*.py
 
-all : install lint test format-check
+all : install lint train test format-check
